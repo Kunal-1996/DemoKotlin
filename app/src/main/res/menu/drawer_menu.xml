@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Your menu ids must match your nav graph ids -->
+<!-- checkableBehavior must be single for top level destinations -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <group
+        android:id="@+id/drawer_menu_top"
+        android:checkableBehavior="single">
+        <!-- Set the starting destination to checked -->
+        <item
+            android:id="@+id/home"
+            android:checked="true"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/dashboard"  />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_user"
+            android:title="@string/user" />
+    </group>
+
+    <group
+        android:id="@+id/drawer_menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/settings"
+          android:icon="@drawable/setting"
+            android:title="@string/title_settings" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout"/>
+    </group>
+</menu>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".OtpVerifyActivity"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="@dimen/dp40"
+        android:src="@drawable/ic_verify" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgOtp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp50"
+        android:text="Wait for the code..."
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp20"
+        android:text="I sent you a code, it will be detected automatically but if it is not detected you can put it below manually as well"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextCode"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp50"
+        android:digits="0123456789"
+        android:hint="enter code"
+        android:maxLength="6" />
+
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+        android:id="@+id/btSignIn"
+        style="@style/loginButton"
+        android:layout_below="@+id/editTextCode"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dp100"
+        android:layout_marginTop="@dimen/dp45"
+        android:text="Verify"
+        app:initialCornerAngle="@dimen/dp27"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="@dimen/dp6"
+        app:spinning_bar_width="@dimen/dp4" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btSignIn"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
