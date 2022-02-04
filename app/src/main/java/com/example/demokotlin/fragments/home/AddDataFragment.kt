@@ -31,8 +31,6 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 
 class AddDataFragment : Fragment() {
 
-
-
     private lateinit var remoteConfig: FirebaseRemoteConfig
     private lateinit var database : DatabaseReference
     private lateinit var homeFragment: HomeFragment
@@ -58,6 +56,7 @@ class AddDataFragment : Fragment() {
 
         setHasOptionsMenu(true)
         (activity as AppCompatActivity).supportActionBar?.title = "AddData"
+
             binding.btBack.setOnClickListener {
             findNavController().navigate(action_addDataFragment_to_homeFragment)
         }
