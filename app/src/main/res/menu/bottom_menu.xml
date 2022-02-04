@@ -8,7 +8,7 @@
 
     <item
         android:id="@+id/nav_dashboard"
-        android:icon="@drawable/bottom_bar_items"
+        android:icon="@drawable/ic_home"
         android:title="@string/dashboard" />
 
     <item
